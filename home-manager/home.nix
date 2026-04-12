@@ -47,7 +47,7 @@
     force = true;
   };
 
-  home.file.".config/qutebrowser".source = ../config/qutebrowser;
+  home.file.".config/qutebrowser/config.py".source = ../config/qutebrowser/config.py;
 
   # home.file.".config/tmux.conf".source = ../config/tmux/tmux.conf;
   programs.tmux = {
