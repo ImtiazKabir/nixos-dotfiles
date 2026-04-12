@@ -28,14 +28,17 @@
 
   # Fcitx5 with OpenBangla Keyboard
   i18n.inputMethod = {
-    enabled = "fcitx5";
+    enable = true;
+    type = "fcitx5";
     fcitx5.addons = with pkgs; [
       fcitx5-openbangla-keyboard
     ];
   };
 
   # Fcitx5 config: Ctrl+Alt+Space to toggle, English (US) + OpenBangla
-  xdg.configFile."fcitx5/config".text = ''
+  xdg.configFile."fcitx5/config" = {
+    force = true;
+    text = ''
     [Hotkey]
     EnumerateWithTriggerKeys=True
     EnumerateSkipFirst=False
@@ -59,8 +62,11 @@
     ShowInputMethodInformation=True
     DefaultPageSize=5
   '';
+  };
 
-  xdg.configFile."fcitx5/profile".text = ''
+  xdg.configFile."fcitx5/profile" = {
+    force = true;
+    text = ''
     [Groups/0]
     Name=Default
     Default Layout=us
@@ -77,6 +83,7 @@
     [GroupOrder]
     0=Default
   '';
+  };
 
   # home.file.".config/tmux.conf".source = ../config/tmux/tmux.conf;
   programs.tmux = {
