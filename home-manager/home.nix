@@ -26,7 +26,7 @@
     nerd-fonts.jetbrains-mono
   ];
 
-  home.file.".config/tmux".source = ../config/tmux;
+  home.file.".config/tmux.conf".source = ../config/tmux/tmux.conf;
 
 
   programs.git = {
