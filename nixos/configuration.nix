@@ -45,15 +45,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  i18n.inputMethod = {
-    type = "fcitx5";
-    enable = true;
-    fcitx5.addons = with pkgs; [
-      fcitx5-m17n
-      fcitx5-openbangla-keyboard
-    ];
-  };
-
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;

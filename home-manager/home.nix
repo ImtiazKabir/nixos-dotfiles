@@ -22,9 +22,61 @@
     xclip
     qutebrowser
     tmux
-    
+    tree
     nerd-fonts.jetbrains-mono
   ];
+
+  # Fcitx5 with OpenBangla Keyboard
+  i18n.inputMethod = {
+    enabled = "fcitx5";
+    fcitx5.addons = with pkgs; [
+      fcitx5-openbangla-keyboard
+    ];
+  };
+
+  # Fcitx5 config: Ctrl+Alt+Space to toggle, English (US) + OpenBangla
+  xdg.configFile."fcitx5/config".text = ''
+    [Hotkey]
+    EnumerateWithTriggerKeys=True
+    EnumerateSkipFirst=False
+
+    [Hotkey/TriggerKeys]
+    0=Control+Alt+space
+
+    [Hotkey/AltTriggerKeys]
+    0=Shift_L
+
+    [Hotkey/EnumerateForwardKeys]
+    0=Control+Shift_L
+
+    [Hotkey/EnumerateBackwardKeys]
+    0=Control+Shift_R
+
+    [Behavior]
+    ActiveByDefault=False
+    ShareInputState=No
+    PreeditEnabledByDefault=True
+    ShowInputMethodInformation=True
+    DefaultPageSize=5
+  '';
+
+  xdg.configFile."fcitx5/profile".text = ''
+    [Groups/0]
+    Name=Default
+    Default Layout=us
+    DefaultIM=keyboard-us
+
+    [Groups/0/Items/0]
+    Name=keyboard-us
+    Layout=
+
+    [Groups/0/Items/1]
+    Name=openbangla
+    Layout=
+
+    [GroupOrder]
+    0=Default
+  '';
 
   # home.file.".config/tmux.conf".source = ../config/tmux/tmux.conf;
   programs.tmux = {
