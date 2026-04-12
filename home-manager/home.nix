@@ -26,6 +26,8 @@
     nerd-fonts.jetbrains-mono
   ];
 
+  home.file.".config/tmux".source = ../config/tmux;
+
 
   programs.git = {
     enable = true;
