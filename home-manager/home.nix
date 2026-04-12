@@ -47,6 +47,8 @@
     force = true;
   };
 
+  home.file.".config/qutebrowser".source = ../config/qutebrowser;
+
   # home.file.".config/tmux.conf".source = ../config/tmux/tmux.conf;
   programs.tmux = {
     enable = true;
