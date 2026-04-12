@@ -26,7 +26,19 @@
     nerd-fonts.jetbrains-mono
   ];
 
-  home.file.".config/tmux.conf".source = ../config/tmux/tmux.conf;
+  # home.file.".config/tmux.conf".source = ../config/tmux/tmux.conf;
+  programs.tmux = {
+    enable = true;
+    extraConfig = ''
+      unbind C-b
+      set -g prefix C-Space
+      bind C-Space send-prefix
+      set -g mouse on
+      set -g base-index 1
+      setw -g pane-base-index 1
+      setw -g mode-keys vi
+    '';
+  };
 
 
   programs.git = {
