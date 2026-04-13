@@ -15,6 +15,9 @@
   xsession = {
     enable = true;
     windowManager.command = "${pkgs.dwm}/bin/dwm";
+    initExtra = ''
+      ${pkgs.slstatus}/bin/slstatus &
+    '';
   };
   
   home.packages = with pkgs; [
