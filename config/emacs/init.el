@@ -32,7 +32,7 @@
 
 
 ;;; Set frame font (monospace for code)
-(set-frame-font "JebrainsMono Nerd Font:weight=normal:size=16" t t)
+(set-frame-font "JetbrainsMono Nerd Font:weight=normal:size=16" t t)
 
 (use-package gruber-darker-theme
   :config

@@ -23,7 +23,6 @@
   home.packages = with pkgs; [
     vim
     emacs
-
     xclip
     qutebrowser
     tmux
@@ -31,6 +30,9 @@
     nerd-fonts.jetbrains-mono
     noto-fonts
     sioyek
+    mpv
+    ffmpeg
+    direnv
   ];
 
 
