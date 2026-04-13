@@ -1,4 +1,8 @@
 ;;; Startup
+
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(load custom-file 'noerror)
+
 ;;; PACKAGE LIST
 (setq package-archives 
       '(("melpa" . "https://melpa.org/packages/")
