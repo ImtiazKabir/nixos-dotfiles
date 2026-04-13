@@ -115,5 +115,14 @@
 
 
 ;;; ----------------------
+;;; ENVRC
+;;; ----------------------
+(use-package envrc
+  :ensure t
+  :hook (after-init . envrc-global-mode))
+
+(setq make-backup-files nil) ; stop creating ~ files
+
+;;; ----------------------
 ;;; END OF INIT
 ;;; ----------------------

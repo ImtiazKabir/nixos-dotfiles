@@ -32,8 +32,15 @@
     sioyek
     mpv
     ffmpeg
-    direnv
   ];
+
+  programs.zsh.enable = true;
+
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+    enableZshIntegration = true;
+  };
 
 
   # Fcitx5 with OpenBangla Keyboard
