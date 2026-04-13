@@ -28,6 +28,7 @@
     tree
     nerd-fonts.jetbrains-mono
     noto-fonts
+    sioyek
   ];
 
 
