@@ -28,6 +28,7 @@
     tmux
     tree
     nerd-fonts.jetbrains-mono
+    nerd-fonts.martian-mono
     noto-fonts
     sioyek
     mpv
