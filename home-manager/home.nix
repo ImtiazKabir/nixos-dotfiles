@@ -30,7 +30,8 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.martian-mono
     noto-fonts
-    sioyek
+    # sioyek
+    zathura # I wish sioyek supported a dual page view
     mpv
     ffmpeg
   ];
