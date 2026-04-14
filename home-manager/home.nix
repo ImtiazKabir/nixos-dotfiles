@@ -65,8 +65,8 @@
   };
 
   home.file.".config/qutebrowser/config.py".source = ../config/qutebrowser/config.py;
-
   home.file.".emacs.d/init.el".source = ../config/emacs/init.el;
+  home.file.".config/zathura/".source = ../config/zathura;
 
   # home.file.".config/tmux.conf".source = ../config/tmux/tmux.conf;
   programs.tmux = {
