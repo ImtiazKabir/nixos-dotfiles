@@ -32,6 +32,7 @@
     noto-fonts
     # sioyek
     zathura # I wish sioyek supported a dual page view
+    libreoffice
     mpv
     ffmpeg
   ];
