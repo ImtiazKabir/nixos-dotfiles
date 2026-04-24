@@ -35,6 +35,7 @@
     libreoffice
     mpv
     ffmpeg
+    unzip
   ];
 
   programs.zsh.enable = true;
