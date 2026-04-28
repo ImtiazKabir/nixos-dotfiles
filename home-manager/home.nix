@@ -36,6 +36,8 @@
     mpv
     ffmpeg
     unzip
+    xournalpp
+    obs-studio
   ];
 
   programs.zsh.enable = true;
