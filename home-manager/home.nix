@@ -37,10 +37,17 @@
     ffmpeg
     unzip
     xournalpp
-    obs-studio
+    qbittorrent
   ];
 
   programs.zsh.enable = true;
+  
+  programs.obs-studio = {
+    enable = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      obs-pipewire-audio-capture
+    ];
+  };
 
   programs.direnv = {
     enable = true;
