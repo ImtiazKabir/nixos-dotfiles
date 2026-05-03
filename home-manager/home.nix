@@ -35,9 +35,11 @@
     libreoffice
     mpv
     ffmpeg
+    zip
     unzip
     xournalpp
     qbittorrent
+   
   ];
 
   programs.zsh.enable = true;
