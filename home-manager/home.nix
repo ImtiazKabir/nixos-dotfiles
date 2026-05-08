@@ -39,7 +39,7 @@
     unzip
     xournalpp
     qbittorrent
-   
+    sxiv
   ];
 
   programs.zsh.enable = true;
