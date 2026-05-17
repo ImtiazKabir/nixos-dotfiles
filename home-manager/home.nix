@@ -40,6 +40,7 @@
     xournalpp
     qbittorrent
     sxiv
+    flameshot
   ];
 
   programs.zsh.enable = true;
