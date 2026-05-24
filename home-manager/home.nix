@@ -41,6 +41,7 @@
     qbittorrent
     sxiv
     flameshot
+    pkgs.texliveFull
   ];
 
   programs.zsh.enable = true;
