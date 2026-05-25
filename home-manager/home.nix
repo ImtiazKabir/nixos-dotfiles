@@ -1,4 +1,4 @@
-{config, pkgs, ... }:
+{config, pkgs, inputs, ... }:
 
 {
 
@@ -22,7 +22,6 @@
   
   home.packages = with pkgs; [
     vim
-    emacs
     xclip
     qutebrowser
     tmux
@@ -30,8 +29,7 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.martian-mono
     noto-fonts
-    # sioyek
-    zathura # I wish sioyek supported a dual page view
+    zathura
     libreoffice
     mpv
     ffmpeg
@@ -41,7 +39,8 @@
     qbittorrent
     sxiv
     flameshot
-    pkgs.texliveFull
+    texliveFull
+    inputs.emacs-flake.packages.x86_64-linux.persistent
   ];
 
   programs.zsh.enable = true;
@@ -80,7 +79,6 @@
   };
 
   home.file.".config/qutebrowser/config.py".source = ../config/qutebrowser/config.py;
-  home.file.".emacs.d/init.el".source = ../config/emacs/init.el;
   home.file.".config/zathura/".source = ../config/zathura;
 
   # home.file.".config/tmux.conf".source = ../config/tmux/tmux.conf;

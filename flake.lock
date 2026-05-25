@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "emacs-flake": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "path": "./flakes/emacs",
+        "type": "path"
+      },
+      "original": {
+        "path": "./flakes/emacs",
+        "type": "path"
+      },
+      "parent": []
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -39,6 +55,7 @@
     },
     "root": {
       "inputs": {
+        "emacs-flake": "emacs-flake",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"
       }

@@ -8,9 +8,14 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    emacs-flake = {
+      url = "path:./flakes/emacs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager } @inputs:
+  outputs = { self, nixpkgs, home-manager, emacs-flake } @inputs:
   let 
     system = "x86_64-linux";
     pkgs = import nixpkgs {
