@@ -19,6 +19,8 @@
       ${pkgs.slstatus}/bin/slstatus &
     '';
   };
+
+  fonts.fontconfig.enable = true;
   
   home.packages = with pkgs; [
     vim
@@ -29,6 +31,7 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.martian-mono
     noto-fonts
+    noto-fonts-lgc-plus
     zathura
     libreoffice
     mpv
@@ -39,8 +42,10 @@
     qbittorrent
     sxiv
     flameshot
-    texliveFull
     inputs.emacs-flake.packages.x86_64-linux.persistent
+    texliveFull
+    typst
+    devenv
   ];
 
   programs.zsh.enable = true;
