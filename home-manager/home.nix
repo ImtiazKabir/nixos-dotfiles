@@ -46,6 +46,8 @@
     texliveFull
     typst
     devenv
+    
+    kitty
   ];
 
   programs.zsh.enable = true;
