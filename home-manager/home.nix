@@ -43,11 +43,10 @@
     sxiv
     flameshot
     inputs.emacs-flake.packages.x86_64-linux.persistent
+    inputs.kitty-flake.packages.x86_64-linux.persistent
     texliveFull
     typst
     devenv
-    
-    kitty
   ];
 
   programs.zsh.enable = true;

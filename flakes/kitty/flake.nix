@@ -20,7 +20,8 @@
     # The config directory baked into the store
     kittyConfig = pkgs.runCommand "kitty-config" {} ''
       mkdir -p $out
-      cp ${./config/} $out/
+      cp ${./config/kitty.conf} $out/kitty.conf
+      cp -r ${./config/themes} $out/themes
     '';
 
     # ---------------------------------------------------------------------------

@@ -13,9 +13,15 @@
       url = "path:./flakes/emacs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    kitty-flake = {
+      url = "path:./flakes/kitty";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
-  outputs = { self, nixpkgs, home-manager, emacs-flake } @inputs:
+  outputs = { self, nixpkgs, home-manager, emacs-flake, kitty-flake, zen-browser } @inputs:
   let 
     system = "x86_64-linux";
     pkgs = import nixpkgs {
